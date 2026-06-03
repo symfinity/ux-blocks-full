@@ -1,0 +1,34 @@
+{
+    "name": "symfinity/ux-blocks-full",
+    "description": "Symfinity UX Blocks full catalog metapackage — core + extended official roles",
+    "license": "MIT",
+    "type": "metapackage",
+    "require": {
+        "symfinity/ux-blocks-core": "@dev",
+        "symfinity/ux-blocks-extended": "@dev"
+    },
+    "suggest": {
+        "symfinity/ux-blocks-marketing": "Optional landing section library",
+        "symfinity/ux-blocks-ecommerce": "Optional shop section library"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../ux-blocks-core",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "../ux-blocks-extended",
+            "options": { "symlink": true }
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "version": "0.1.0-dev",
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    }
+}
