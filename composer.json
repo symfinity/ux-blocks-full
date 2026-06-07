@@ -1,11 +1,12 @@
 {
     "name": "symfinity/ux-blocks-full",
-    "description": "Symfinity UX Blocks full catalog metapackage — core + extended official roles",
+    "description": "Symfinity UX Blocks full catalog metapackage — core + extended + live official roles",
     "license": "MIT",
     "type": "metapackage",
     "require": {
         "symfinity/ux-blocks-core": "@dev",
-        "symfinity/ux-blocks-extended": "@dev"
+        "symfinity/ux-blocks-extended": "@dev",
+        "symfinity/ux-blocks-live": "@dev"
     },
     "suggest": {
         "symfinity/ux-blocks-marketing": "Optional landing section library",
@@ -21,8 +22,24 @@
             "type": "path",
             "url": "../ux-blocks-extended",
             "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "../ux-blocks-live",
+            "options": { "symlink": true }
         }
     ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5 || ^11.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfinity\\UxBlocksFull\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml.dist"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "version": "0.1.0-dev",
