@@ -1,14 +1,15 @@
 {
     "name": "symfinity/ux-blocks-full",
-    "description": "Symfinity UX Blocks full catalog metapackage — core + extended + live official roles",
+    "description": "Symfinity UX Blocks full catalog metapackage — core + extended + interactive official roles",
     "license": "MIT",
     "type": "metapackage",
     "require": {
         "symfinity/ux-blocks-core": "@dev",
         "symfinity/ux-blocks-extended": "@dev",
-        "symfinity/ux-blocks-live": "@dev"
+        "symfinity/ux-blocks-interactive": "@dev"
     },
     "suggest": {
+        "symfinity/ux-blocks-live": "Optional LiveComponent catalog tier",
         "symfinity/ux-blocks-marketing": "Optional landing section library",
         "symfinity/ux-blocks-ecommerce": "Optional shop section library"
     },
@@ -25,7 +26,7 @@
         },
         {
             "type": "path",
-            "url": "../ux-blocks-live",
+            "url": "../ux-blocks-interactive",
             "options": { "symlink": true }
         }
     ],
