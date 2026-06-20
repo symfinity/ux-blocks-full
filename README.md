@@ -2,7 +2,7 @@
 
 # Ux Blocks Full
 
-### Symfinity UX Blocks full catalog metapackage — core + extended official roles
+### Symfinity UX Blocks full catalog metapackage — core + extended + interactive official roles
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat&logo=php&logoColor=white)](composer.json)
 
@@ -24,6 +24,8 @@
 - PHP 8.2+
 
 ## Install
+
+The **Full app UI** profile — core + extended + interactive tiers for an admin/product shell. Marketing, ecommerce, live, and lab are **explicit opt-in** (see `suggest`). Full profile table: [UX Blocks install profiles](https://github.com/symfinity/ux-blocks#install-profiles).
 
 ```bash
 composer require symfinity/ux-blocks-full
