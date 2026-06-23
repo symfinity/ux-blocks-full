@@ -1,10 +1,11 @@
 {
     "name": "symfinity/ux-blocks-full",
-    "description": "Symfinity UX Blocks full catalog metapackage — core + extended + interactive official roles",
+    "description": "Symfinity UX Blocks full catalog metapackage — core + form + extended + interactive official roles",
     "license": "MIT",
     "type": "metapackage",
     "require": {
         "symfinity/ux-blocks-core": "@dev",
+        "symfinity/ux-blocks-form": "@dev",
         "symfinity/ux-blocks-extended": "@dev",
         "symfinity/ux-blocks-interactive": "@dev"
     },
@@ -17,6 +18,11 @@
         {
             "type": "path",
             "url": "../ux-blocks-core",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "../ux-blocks-form",
             "options": { "symlink": true }
         },
         {
