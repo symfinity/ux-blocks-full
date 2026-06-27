@@ -32,15 +32,29 @@
         "symfinity/ux-blocks-interactive": "^0.1",
         "symfinity/ux-blocks-live": "^0.1"
     },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5 || ^11.0"
+    },
     "suggest": {
         "symfinity/ux-blocks-marketing": "Landing and marketing section components",
         "symfinity/ux-blocks-ecommerce": "Shop and ecommerce section components"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfinity\\UxBlocksFull\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml.dist",
+        "phpstan": "phpstan analyse --memory-limit=512M"
     },
     "config": {
         "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "version": "0.1.0-dev",
     "extra": {
         "branch-alias": {
             "dev-main": "0.1.x-dev"
