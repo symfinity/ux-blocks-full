@@ -1,8 +1,8 @@
 # Installation
 
-## Requirements
+## Prerequisites
 
-PHP 8.2+ and Symfony 7.4.
+Add the [symfinity/recipes](https://github.com/symfinity/recipes) Flex endpoint to your project's `composer.json` (see [recipes README](https://github.com/symfinity/recipes/blob/main/README.md)).
 
 ## Composer
 
@@ -10,20 +10,42 @@ PHP 8.2+ and Symfony 7.4.
 composer require symfinity/ux-blocks-full
 ```
 
-## Symfony Flex
+Composer installs all five tier packages. The Flex recipe registers these bundles in `config/bundles.php`:
 
-Describe recipe output: `config/packages/`, routes, assets (if any).
+- `Symfinity\UxBlocksCore\SymfinityUxBlocksCoreBundle`
+- `Symfinity\UxBlocksForm\SymfinityUxBlocksFormBundle`
+- `Symfinity\UxBlocksExtended\SymfinityUxBlocksExtendedBundle`
+- `Symfinity\UxBlocksInteractive\SymfinityUxBlocksInteractiveBundle`
+- `Symfinity\UxBlocksLive\SymfinityUxBlocksLiveBundle`
 
-## Manual installation
+## Stage B (LiveComponent)
 
-Only when Flex is unavailable: register bundle, copy config skeleton.
+The live tier requires Symfony UX LiveComponent and Turbo. They are pulled in transitively when you require full. Confirm after install:
+
+```bash
+composer show symfony/ux-live-component symfony/ux-turbo
+```
+
+## Optional Chameleon styling
+
+Full does **not** require `symfinity/ui-kernel`. Add it when you want Symfinity theme tokens and generated CSS:
+
+```bash
+composer require symfinity/ui-kernel
+```
 
 ## Verify installation
 
 ```bash
-# example: bin/console debug:config symfinity_* 
+composer show symfinity/ux-blocks-core symfinity/ux-blocks-form \
+  symfinity/ux-blocks-extended symfinity/ux-blocks-interactive symfinity/ux-blocks-live
+
+php bin/console about
 ```
+
+See [Verification](verification.md) for a full clean-app smoke walkthrough.
 
 ## Next steps
 
-[Quick start](quickstart.md).
+- [symfinity/ux-blocks-core](https://github.com/symfinity/ux-blocks-core) — component handbook
+- [CHANGELOG](../CHANGELOG.md) · [CONTRIBUTING](../CONTRIBUTING.md) · [GitHub Issues](https://github.com/symfinity/ux-blocks-full/issues)

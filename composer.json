@@ -1,55 +1,46 @@
 {
     "name": "symfinity/ux-blocks-full",
-    "description": "Symfinity UX Blocks full catalog metapackage — core + form + extended + interactive official roles",
+    "description": "Metapackage for the complete official catalog (core, form, extended, interactive, live)",
     "license": "MIT",
     "type": "metapackage",
-    "require": {
-        "symfinity/ux-blocks-core": "@dev",
-        "symfinity/ux-blocks-form": "@dev",
-        "symfinity/ux-blocks-extended": "@dev",
-        "symfinity/ux-blocks-interactive": "@dev"
+    "homepage": "https://github.com/symfinity/ux-blocks-full",
+    "support": {
+        "issues": "https://github.com/symfinity/ux-blocks-full/issues",
+        "source": "https://github.com/symfinity/ux-blocks-full",
+        "docs": "https://docs.symfinity.dev/ux-blocks-full"
     },
-    "suggest": {
-        "symfinity/ux-blocks-live": "Optional LiveComponent catalog tier",
-        "symfinity/ux-blocks-marketing": "Optional landing section library",
-        "symfinity/ux-blocks-ecommerce": "Optional shop section library"
-    },
-    "repositories": [
+    "authors": [
         {
-            "type": "path",
-            "url": "../ux-blocks-core",
-            "options": { "symlink": true }
-        },
-        {
-            "type": "path",
-            "url": "../ux-blocks-form",
-            "options": { "symlink": true }
-        },
-        {
-            "type": "path",
-            "url": "../ux-blocks-extended",
-            "options": { "symlink": true }
-        },
-        {
-            "type": "path",
-            "url": "../ux-blocks-interactive",
-            "options": { "symlink": true }
+            "name": "Symfinity",
+            "email": "dev@symfinity.net",
+            "homepage": "https://symfinity.net/"
         }
     ],
-    "require-dev": {
-        "phpunit/phpunit": "^10.5 || ^11.0"
+    "keywords": [
+        "symfony",
+        "symfony-bundle",
+        "symfony-ux",
+        "twig-components",
+        "ux-blocks",
+        "design-system",
+        "metapackage"
+    ],
+    "require": {
+        "symfinity/ux-blocks-core": "^0.1",
+        "symfinity/ux-blocks-form": "^0.1",
+        "symfinity/ux-blocks-extended": "^0.1",
+        "symfinity/ux-blocks-interactive": "^0.1",
+        "symfinity/ux-blocks-live": "^0.1"
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Symfinity\\UxBlocksFull\\Tests\\": "tests/"
-        }
+    "suggest": {
+        "symfinity/ux-blocks-marketing": "Landing and marketing section components",
+        "symfinity/ux-blocks-ecommerce": "Shop and ecommerce section components"
     },
-    "scripts": {
-        "test": "phpunit -c phpunit.xml.dist"
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "version": "0.1.0-dev",
     "extra": {
         "branch-alias": {
             "dev-main": "0.1.x-dev"

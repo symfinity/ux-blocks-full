@@ -1,7 +1,26 @@
-# Overview
+# UX Blocks Full
 
-Package handbook for this library.
+`symfinity/ux-blocks-full` is a Composer **metapackage** — one install line for the complete official UX Blocks catalog.
 
-## Pages
+## What you get
 
-- [Installation](installation.md)
+| Tier | Package | Role |
+|------|---------|------|
+| Atoms | `symfinity/ux-blocks-core` | Foundation Twig components |
+| Forms | `symfinity/ux-blocks-form` | Form controls and field compounds |
+| Compounds | `symfinity/ux-blocks-extended` | Application UI patterns |
+| Interactive | `symfinity/ux-blocks-interactive` | Client-side Stimulus widgets |
+| Live | `symfinity/ux-blocks-live` | Symfony LiveComponent widgets |
+
+## Handbook
+
+- [Installation](installation.md) — Flex endpoint, `composer require`, bundle registration
+- [Verification](verification.md) — smoke checks after install
+
+## Optional add-ons
+
+- **Chameleon styling:** `composer require symfinity/ui-kernel` (not part of full)
+- **Marketing sections:** `composer require symfinity/ux-blocks-marketing`
+- **Shop sections:** `composer require symfinity/ux-blocks-ecommerce`
+
+For smaller installs, require individual tier packages instead. See [symfinity/ux-blocks](https://github.com/symfinity/ux-blocks) install profiles.

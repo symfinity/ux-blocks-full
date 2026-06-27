@@ -2,14 +2,11 @@
 
 # UX Blocks Full
 
-### Metapackage — core, extended, and interactive UX Blocks tiers for full app UI
+### Metapackage for the complete official catalog (core, form, extended, interactive, live)
 
-[![PHP Version](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat&logo=php&logoColor=white)](composer.json)
-<br/>
 [![CI](https://github.com/symfinity/ux-blocks-full/actions/workflows/ci.yml/badge.svg)](https://github.com/symfinity/ux-blocks-full/actions/workflows/ci.yml)
 <br/>
 [![Release](https://img.shields.io/packagist/v/symfinity/ux-blocks-full.svg?style=flat&logo=packagist&logoColor=white)](https://packagist.org/packages/symfinity/ux-blocks-full)
-[![Downloads](https://img.shields.io/packagist/dt/symfinity/ux-blocks-full.svg?style=flat&logo=packagist&logoColor=white)](https://packagist.org/packages/symfinity/ux-blocks-full)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 </div>
@@ -20,44 +17,41 @@
 
 ## Features
 
-- **Full app UI profile** — pulls `ux-blocks-core`, `ux-blocks-extended`, and `ux-blocks-interactive`
-- **One require** — smallest composer line for admin and product shells
-- **Vertical tiers stay opt-in** — marketing, ecommerce, live, lab, and kiosk are separate packages
+- **Five-tier catalog** — core, form, extended, interactive, and live in one `composer require`
+- **Flex recipe** — registers all five tier bundles automatically
+- **Chameleon-agnostic** — no hard dependency on `ui-kernel`, `ui-action`, or `ux-runtime`
+- **Vertical opt-ins** — marketing and ecommerce via `suggest` only
+- **Metapackage boundary** — no PHP source; tier bundles own runtime and handbook depth
 
 ## Prerequisites
 
-Add the [symfinity/recipes](https://github.com/symfinity/recipes) Flex endpoint to your project's `composer.json` (see [recipes README](https://github.com/symfinity/recipes/blob/main/README.md)) — recipes are not in Symfony's official recipe repository yet.
+Add the [symfinity/recipes](https://github.com/symfinity/recipes) Flex endpoint to your project's `composer.json` (see [recipes README](https://github.com/symfinity/recipes/blob/main/README.md)).
 
 ## Installation
 
-Marketing, ecommerce, live, lab, and kiosk packages are **explicit opt-in**. See [UX Blocks install profiles](https://github.com/symfinity/ux-blocks#install-profiles).
-
 ```bash
 composer require symfinity/ux-blocks-full
 ```
 
-See [Installation](docs/installation.md).
-
-## Quick Start
-
-```bash
-composer require symfinity/ux-blocks-full
-composer require symfinity/ui-kernel   # optional themed apps
-```
+See [Installation](docs/installation.md) for bundle list, Stage B deps, and verification.
 
 ## Documentation
 
-- **[Installation](docs/installation.md)** — Flex, dependencies, verify
+- **[Handbook index](docs/index.md)** — what full installs and optional add-ons
+- **[Installation](docs/installation.md)** — Flex, bundles, kernel opt-in
+- **[Verification](docs/verification.md)** — clean-app smoke steps
 
 ## Requirements
 
-- PHP 8.2 or higher
+- PHP 8.2 or higher (via tier packages)
+- Symfony 7.4 or 8.x (via tier packages)
+- All five `symfinity/ux-blocks-*` tiers at `^0.1`
 
 ## Support
 
-- [GitHub Issues](https://github.com/symfinity/ux-blocks-full/issues)
-- [Security](.github/SECURITY.md)
 - [Contributing](CONTRIBUTING.md)
+- [Security](.github/SECURITY.md)
+- [GitHub Issues](https://github.com/symfinity/ux-blocks-full/issues)
 
 ## License
 
