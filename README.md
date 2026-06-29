@@ -10,6 +10,7 @@
 [![CI](https://github.com/symfinity/ux-blocks-full/actions/workflows/ci.yml/badge.svg)](https://github.com/symfinity/ux-blocks-full/actions/workflows/ci.yml)
 <br/>
 [![Release](https://img.shields.io/packagist/v/symfinity/ux-blocks-full.svg?style=flat&logo=packagist&logoColor=white)](https://packagist.org/packages/symfinity/ux-blocks-full)
+[![Downloads](https://img.shields.io/packagist/dt/symfinity/ux-blocks-full.svg?style=flat&logo=packagist&logoColor=white)](https://packagist.org/packages/symfinity/ux-blocks-full)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 </div>
