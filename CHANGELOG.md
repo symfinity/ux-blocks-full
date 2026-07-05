@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-07-05
+
+### Added
+
+- Handbook [verification.md](docs/verification.md) — P3 integration profile and clean-app smoke (`composer require`, five-tier resolve, Stage B LiveComponent checks, optional ComboboxLive themed render)
+- **`integration_profile: P3`** frontmatter on handbook index
+- [Upgrade guide](docs/upgrade.md) for the 0.1.x patch line
+
+### Changed
+
+- **PHPUnit bootstrap** — `tests/bootstrap.php` resolves monorepo or split-mirror Composer autoload; optional `tests/bootstrap.local.php` hook
+- **Split mirror CI** — Composer package cache and `GITHUB_TOKEN` authentication so GitHub Actions reliably resolves `symfinity/*` tier dependencies across the PHP × Symfony matrix
+- **README** — Packagist downloads badge
+- Handbook: verification documents optional ui-kernel vs automatic inline tier CSS from `symfinity/ux-blocks-core` **^0.1.6**
+
+### Notes
+
+- No PHP source and no dependency constraint changes — tier pins remain `^0.1`; patch releases on individual tiers (including core **0.1.6** auto-inject CSS) resolve automatically via Composer
+- Upgrading from **0.1.1** needs no config edits; each pulled tier passes its own integration profile
+
 ## [0.1.1] - 2026-06-29
 
 ### Added

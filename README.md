@@ -44,6 +44,7 @@ See [Installation](docs/installation.md) for bundle list, Stage B deps, and veri
 - **[Handbook index](docs/index.md)** — what full installs and optional add-ons
 - **[Installation](docs/installation.md)** — Flex, bundles, kernel opt-in
 - **[Verification](docs/verification.md)** — clean-app smoke steps
+- **[Upgrade](docs/upgrade.md)** — patch-line updates from 0.1.0 onward
 
 ## Requirements
 

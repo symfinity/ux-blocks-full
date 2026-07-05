@@ -1,3 +1,7 @@
+---
+integration_profile: P3
+---
+
 # UX Blocks Full
 
 `symfinity/ux-blocks-full` is a Composer **metapackage** — one install line for the complete official UX Blocks catalog.
@@ -16,6 +20,7 @@
 
 - [Installation](installation.md) — Flex endpoint, `composer require`, bundle registration
 - [Verification](verification.md) — smoke checks after install
+- [Upgrade](upgrade.md) — patch-line updates from 0.1.0 onward
 
 ## Optional add-ons
 
@@ -24,3 +29,5 @@
 - **Shop sections:** `composer require symfinity/ux-blocks-ecommerce`
 
 For smaller installs, require individual tier packages instead. See [symfinity/ux-blocks](https://github.com/symfinity/ux-blocks) install profiles.
+
+Consumer gate: profile **P3 metapackage** — each pulled tier passes its own integration profile.

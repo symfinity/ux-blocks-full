@@ -1,5 +1,7 @@
 # Verification
 
+**Integration profile:** P3 — metapackage (five tier bundles at `^0.1`).
+
 Checks after installing **symfinity/ux-blocks-full** in a Symfony app.
 
 ## Clean-app smoke
@@ -27,17 +29,21 @@ Expected: all five tier packages installed; five UX Blocks bundles registered in
 composer show symfony/ux-live-component symfony/ux-turbo
 ```
 
-### Themed smoke (optional)
+### Component render smoke
 
-```bash
-composer require symfinity/ui-kernel
-```
+Add Chameleon theme CSS with `symfinity/ui-kernel`, **or** rely on automatic inline tier CSS from `symfinity/ux-blocks-core` **^0.1.6** when ui-kernel is not installed (no manual AssetMapper wiring required).
 
 ```twig
 <twig:ComboboxLive name="demo" placeholder="Choose…" />
 ```
 
 Load the page — expect HTTP 200 and `blocks.live.combobox` in the response body.
+
+Optional themed install:
+
+```bash
+composer require symfinity/ui-kernel
+```
 
 ## See also
 
