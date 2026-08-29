@@ -1,0 +1,68 @@
+{
+    "name": "symfinity/ux-blocks-full",
+    "description": "Metapackage for the complete official catalog (core, form, extended, interactive, live)",
+    "license": "MIT",
+    "type": "metapackage",
+    "homepage": "https://github.com/symfinity/ux-blocks-full",
+    "support": {
+        "issues": "https://github.com/symfinity/ux-blocks-full/issues",
+        "source": "https://github.com/symfinity/ux-blocks-full",
+        "docs": "https://docs.symfinity.dev/ux-blocks-full"
+    },
+    "authors": [
+        {
+            "name": "Symfinity",
+            "email": "dev@symfinity.net",
+            "homepage": "https://symfinity.net/"
+        }
+    ],
+    "keywords": [
+        "symfony",
+        "symfony-bundle",
+        "symfony-ux",
+        "twig-components",
+        "ux-blocks",
+        "design-system",
+        "metapackage"
+    ],
+    "require": {
+        "symfinity/ux-blocks-core": "^0.1",
+        "symfinity/ux-blocks-form": "^0.1",
+        "symfinity/ux-blocks-extended": "^0.1",
+        "symfinity/ux-blocks-interactive": "^0.1",
+        "symfinity/ux-blocks-live": "^0.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5 || ^11.0"
+    },
+    "suggest": {
+        "symfinity/ux-blocks-marketing": "Landing and marketing section components",
+        "symfinity/ux-blocks-ecommerce": "Shop and ecommerce section components"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfinity\\UxBlocksFull\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml.dist",
+        "phpstan": "phpstan analyse --memory-limit=512M"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/serotoninja"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    }
+}
